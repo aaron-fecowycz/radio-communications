@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J2VPY0QNLL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J2VPY0QNLL');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+  rel="shortcut icon"
+  href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'><path d='M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8'/></svg>">
+<title>Radio Communications Resource</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-icons.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+<style>
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+margin-top:2rem;
+    padding: 2rem;
+    min-height: calc(100vh - 2rem);
+}
+
+#home {
+    background-color: #f4f4f4;
+}
+
+#about {
+    background-color: #e2e2e2;
+}
+
+#services {
+    background-color: #d0d0d0;
+}
+
+#contact {
+    background-color: #b8b8b8;
+}
+.submit_btn{margin-top:2rem;}
+.highlight2{
+	font-size:1.4rem;
+	font-weight:bold;
+	display: table;
+	margin-bottom: 7px;
+	margin-top: 5px;
+	padding: 10px;
+	border-left: 5px solid;
+	border-left-color: currentcolor;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	border-color: #418545;
+}
+.highlight6{
+	display: table;
+	margin-bottom: 7px;
+	margin-top: 5px;
+	padding: 10px;
+	border-left: 5px solid;
+	border-left-color: currentcolor;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	border-color: #D13759;
+}
+.btn{display:inline-block!important;margin:1rem 0;}
+.helpers{border:1px solid #000;border-radius:4px;margin-bottom:2rem;margin-top:1rem;padding:1rem;}
+.helpers ul{padding:5px;magin:0;}
+.helpers ul li{display:inline-block;padding:0;margin:0;line-height:3rem;}
+.helpers ul li a:link, .helpers ul li a:visited{background-color:#2ab89c;color:#fff;text-decoration:none;padding:5px;margin-right:1.5rem;border-radius:4px;}
+.highlight2 strong{font-weight:bold;}
+
+#terminology dl dt{border-bottom:1px solid grey;padding-bottom:1rem;}
+#terminology dl dd{margin:1rem 0 2rem 1rem;padding-bottom:2rem;}
+</style>
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/radio-coms.js"></script>
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js "></script>-->
+
+
+</head>
+<body>
+<nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#home"><span class="bi bi-broadcast-pin"></span> Radio Coms Resource</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home" data-target-page="home" data-bs-dismiss="offcanvas"><span class="bi bi-house-fill"></span> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page_link" href="#basic_info" data-target-page="basic_info" data-bs-dismiss="offcanvas"><span class="bi bi-broadcast-pin"></span> Start Basic Information</a>
+			<a class="nav-link page_link" href="#message_selector" data-target-page="message_selector"><span class="bi bi-list-stars"></span> Message Selector</a>
+			<a class="nav-link page_link" href="#terminology" data-target-page="terminology"><span class="bi bi-journal-check"></span> Standard Terminology</a>
+
+			<a class="nav-link page_link" href="#translator" data-target-page="translator"><span class="bi bi-translate"></span> Phonetic Translator</a>
+			<a class="nav-link page_link" href="#station-numbers" data-target-page="station-numbers"><span class="bi bi-123" style="border:1px solid #999;padding:0 3px;border-radius:2px;"></span> Station Numbers</a>
+			<a class="nav-link page_link" href="#message_log" data-target-page="message_log">Message Log</a>
+			
+			
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+    
+	
+	
+	<main>
+        <section id="home">
+            <h1>Home</h1>
+            <div class="container text-center">
+			
+			<div class="row justify-content-md-center" style="margin-bottom:3rem;">
+			<div class="col-md-6">
+			<div class="card">
+			<div class="card-body">
+			<h2>Radio Message Tool</h2>
+			<p>Quick and easy tool to enable you to formulate radio messages.</p>
+			<button class="btn btn-success page_link" data-target-page="basic_info"><span class="bi bi-broadcast-pin"></span> Start creating your radio message</button>
+			</div>
+			</div>
+			</div>
+			</div>
+			
+			<div class="row">
+			<div class="col-md-4">
+			<div class="card">
+			<div class="card-body">
+			<h2>Standard Terminology</h2>
+			<p>A list of standard terms and their meanings for use in radio messages.</p>
+			<button class="btn btn-primary page_link" data-target-page="terminology"><span class="bi bi-journal-check"></span> Standard terminology listing</button>
+			</div>
+			</div>
+			<br><br>
+			</div>
+			
+			<div class="col-md-4">
+			<div class="card">
+			<div class="card-body">
+			<h2>Phonetic Translation Tool</h2>
+			<p>Quick and easy tool translate a word in to phonetics.</p>
+			<button class="btn btn-primary page_link" data-target-page="translator"><span class="bi bi-translate"></span> Translate a word in to phonetics</button>
+			</div>
+			</div>
+			<br><br>
+			</div>
+			<div class="col-md-4">
+			<div class="card">
+			<div class="card-body">
+			<h2>Station Number List</h2>
+			<p>areference list of station names and numbers for quick reference</p>
+			<button class="btn btn-primary page_link" data-target-page="station-numbers"><span class="bi bi-123" style="border:1px solid #fff;padding:0 3px;border-radius:2px;"></span> View station names and numbers</button>
+			</div>
+			</div>
+			<br><br>
+			</div>
+			</div>
+			</div>
+			<hr>
+			<p>Application Last Update: 20260119</p>
+			<p>Source Guidance: <a href="https://nottsfire.sharepoint.com/sites/T-OPSG/MyNet%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FT%2DOPSG%2FMyNet%20Documents%2FT%5FPRO%5F%5B995%5D%5FIncident%2DCommunications%5F002%2Epdf&parent=%2Fsites%2FT%2DOPSG%2FMyNet%20Documents">PRO-995-002 | Incident Communications</a> [last access: 20260119]</p>
+			
+			
+        </section>
+		
+		
+		
+        <section id="basic_info">
+		<div class="container">
+		<form>
+            <h1><button class="btn btn-primary page_link" data-target-page="home"><span class="bi bi-arrow-left-circle-fill"></span> Back </button>  Start: Basic Information</h1>
+            <div class="boilerform">
+			<div class="form-group">
+			<label for="appliance" class="form-label">Appliance</label> 
+			<select id="appliance" class="form-control"><option val="T23P1">T23P1</option><option val="T23S1">T23S1</option> 
+			</select>
+			</div>
+			<div class="form-group"><label for="oic" class="form-label">OIC</label> 
+			<input id="oic" type="text" class="form-control" />
+			</div>
+			<div class="form-group"><label for="crew_number" class="form-label">Number of crew</label> 
+			<input id="crew_number" max="6" min="3" type="number" class="form-control" />
+			</div>
+			<div class="form-group"><label for="incident_location" class="form-label">Location </label><textarea id="incident_location" class="form-control"></textarea>
+			</div>
+			<div class="form-group submit_btn">
+			<button class="btn btn-success" id="basic_info_continue" data-target-page="message_selector">Continue
+			</button>
+			</div>
+			</div>
+			</form>
+			</div>
+        </section>
+		
+		
+		
+		
+        <section id="message_selector">
+		<div class="container">
+            <h1><button class="btn btn-primary page_link" data-target-page="basic_info"><span class="bi bi-arrow-left-circle-fill"></span> Back </button>  Message Selector</h1>
+            <div class="list-group">
+			<a href="#message_mti" class="list-group-item list-group-item-action page_link" data-target-page="message_mti">Mobile to Incident</a>
+			<a href="#message_ia" class="list-group-item list-group-item-action page_link" data-target-page="message_ia">In Attendance</a>
+			<a href="#message_fi" class="list-group-item list-group-item-action page_link" data-target-page="message_fi">First Impressions Message</a>
+			<a href="#message_am" class="list-group-item list-group-item-action page_link" data-target-page="message_am">Assistance Message</a>
+			<a href="#message_ims" class="list-group-item list-group-item-action page_link" data-target-page="message_ims">Informative Message - Simple</a>
+			<a href="#message_im_haulat" class="list-group-item list-group-item-action page_link" data-target-page="message_im_haulat">Informative Message - HAULAT</a>
+			<a href="#message_im_methane" class="list-group-item list-group-item-action page_link" data-target-page="message_im_methane">Informative Message - METHANE</a>
+			<a href="#message_im_ecp" class="list-group-item list-group-item-action page_link" data-target-page="message_im_ecp">Informative - Establish Command Point</a>
+			<a href="#message_im_cdcp" class="list-group-item list-group-item-action page_link" data-target-page="message_im_cdcp">Informative - Closing Down a Command Point</a>
+			<a href="#message_priority" class="list-group-item list-group-item-action page_link" data-target-page="message_priority">Priority Message</a>
+			<a href="#message_sm" class="list-group-item list-group-item-action page_link" data-target-page="message_sm">Stop Message</a>
+			<a href="#message_fim" class="list-group-item list-group-item-action page_link" data-target-page="message_fim">Further Informative Message</a>
+			<a href="#message_rhs" class="list-group-item list-group-item-action page_link" data-target-page="message_rhs"> Returning Home Station</a>
+			<a href="#message_cdhs" class="list-group-item list-group-item-action page_link" data-target-page="message_cdhs">Closing Down Home Station</a>
+
+			</div>
+		</div>
+        </section>
+		
+		
+		
+		
+		
+		
+		<!-- START In Closing Down Home Station Message -->
+        <section id="message_cdhs">
+		<div class="container">
+            <h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Closing Down Home Station</h1>
+			
+			<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_cdhs" data-target-message-title="Closing Down Home Station"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_cdhs">
+			<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> ED over</span>
+			</p>
+			<p><span class="highlight2">Mobile: ED closing down home station. <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> roger ED out</span></p>
+			</div>
+		</div>
+        </section>
+		<!-- END In Closing Down Home Station Message -->
+		
+		
+		
+		<!-- START In Mobile to Incident Message -->
+        <section id="message_mti">
+		<div class="container">
+            <h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Mobile to Incident <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#info_mti"><i class="bi bi-info-circle"></i> Info</button></h1>
+			
+			<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_mti" data-target-message-title="Mobile to incident"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_mti">
+			<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> ED over</span>
+			</p>
+			<p><span class="highlight2">Mobile: ED mobile to <span class="incident_location">incident_location</span>, <span class="oic">ioc</span> plus <span class="crew_number">crew_number</span>. <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> roger ED out</span>
+			</p>
+			</div>
+		</div>
+        </section>
+		<!-- END In Mobile to Incident Message -->
+		
+		
+		
+		
+		<!-- START In Attendance Message -->
+		<section id="message_ia">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> In Attendance Message</h1>
+            
+        <div id="correct_button_area">
+		  <div>
+			<button class="btn btn-primary" id="correct_address">Correct Address
+			</button>
+		  </div>
+		  <div id="new_incident_location_details">
+			<div class="form-group"><label for="incident_location" class="form-label">Updated Location </label>
+			<textarea id="new_incident_location" class="form-control"></textarea>
+			</div>
+			<div class="form-group submit_btn">
+			<button class="btn btn-success" id="save_correct_address">Save new address
+			</button></div>
+		  </div>
+		</div>
+		<div id="standard">
+			<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_ia" data-target-message-title="In Attenedance"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_ia">
+		  <p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> over</span>
+		  </p>
+		  <p><span class="highlight6">Control: <span class="appliance">appliance</span> ED over</span>
+		  </p>
+		  <p><span class="highlight2">Mobile: ED in Attendance, <span class="appliance">appliance</span> over</span>
+		  </p>
+		  <p><span class="highlight6">Control: <span class="appliance">appliance</span> roger ED out</span>
+		  </p>
+		  </div>
+		</div>
+		<div id="update_address">
+					<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_iaua" data-target-message-title="In Attendance - Update to Address"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_iaua">
+		  <p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> over</span>
+		  </p>
+		  <p><span class="highlight6">Control: <span class="appliance">appliance</span> ED over</span>
+		  </p>
+		  <p><span class="highlight2">Mobile: ED Correction of address, this incident is, <span class="new_incident_location"></span> - <span class="appliance">appliance</span> over</span>
+		  </p>
+		  <p><span class="highlight6">Control: <span class="appliance">appliance</span> Confirm Correction to address the incident address is now <span class="new_incident_location"></span> ED over</span>
+		  </p>
+		  <p><span class="highlight2">Mobile: ED affirmative <span class="appliance">appliance</span> over</span>
+		  </p>
+		  <p><span class="highlight6">Control: <span class="appliance">appliance</span> roger ED out</span>
+		  </p>
+		  </div>
+		</div>
+		
+		
+		</div>
+        </section>
+		<!-- END In Attendance Message -->
+		
+		
+
+		<!-- START First Impression Message -->
+		<section id="message_fi">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> First Impression Message <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#info_fi"><i class="bi bi-info-circle"></i> Info</button></h1>
+            
+        
+		
+		  <div id="first_impression_details">
+			<button class="btn btn-danger" id="clear_message">Clear Message
+			</button>
+			<div class="form-group"><label for="first_impression_message_details" class="form-label">Message </label><textarea id="first_impression_message_details" class="form-control"></textarea>
+			</div>
+			<div class="form-group">
+			<p>Establish tatical mode?</p>
+			<div class="form-check">
+			  <input class="form-check-input" id="tactical_mode_no" name="establish_tactical_mode" type="radio" value="no" /><label for="tactical_mode_no" class="form-check-label">No</label>
+			</div>
+			<div class="form-check">
+			  <input class="form-check-input" id="tactical_mode_yes" name="establish_tactical_mode" type="radio" value="yes" /><label for="tactical_mode_yes" class="form-check-label">Yes</label> 
+			  </div>
+			  
+			</div>
+			<div class="tactical_mode_container">
+			  <div class="form-group"><label for="fim_tactical_mode" class="form-label">Tactical mode</label>
+			  <select id="fim_tactical_mode" class="form-select"><option val="Oscar offensive">Oscar offensive</option><option val="Delta defensive">Delta defensive</option><option val="No overall mode declared">No overall mode declared</option></select></div>
+			  <div class="form-group"><label for="tactical_mode_reason" class="form-label">Tactical mode reason</label><textarea data-target-message-builder-id="fim_tmr" id="tactical_mode_reason" class="form-control text_box"></textarea>
+			  </div>
+			  <div class="helpers" id="fim_tmr">
+				<h3>Quick Message Builder
+				</h3>
+				<ul>
+				  <li><a class="phrase" href="#">Saveable Life</a></li>
+				  <li><a class="phrase" href="#">Saveable Property</a></li>
+				  <li><a class="phrase" href="#">Enviromental Protection</a></li>
+				  <li><a class="phrase" href="#">Investigation</a></li>
+				  <li><a class="phrase" href="#">Information Gathering</a></li>
+				  <li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+				  <li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+				</ul>
+			  </div>
+			</div>
+			<div class="form-group">
+			<button id="create_message" class="btn btn-success">Create message
+			</button></div>
+		  </div>
+		  <div id="first_impression_message">
+		  
+			<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_fi" data-target-message-title="First Impression Message"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_fi">
+		  
+			<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> first impressions message over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> ED over</span>
+			</p>
+			<p><span class="highlight2">Mobile: ED <span class="first_impression_message_details">first_impression_message_details</span>. <span class="fim_rm_tactical_mode">Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>.</span> <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> <span class="first_impression_message_details">first_impression_message_details</span>. <span class="fim_rm_tactical_mode">Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>.</span> ED over</span>
+			</p>
+			<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> Roger ED out</span>
+			</p>
+			</div>
+		  
+		  <div  class="form-group">
+			<button class="btn btn-warning" id="new_first_impression_message">New First Impressions Message
+			</button>
+		  </div>
+		</div>
+
+		</div>
+        </section>
+		<!-- END First Impression -->
+
+
+		<!-- START Assistance Message -->
+		<section id="message_am">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Assistance Message <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#info_am"><i class="bi bi-info-circle"></i> Info</button></h1>
+            
+        <div id="assistance_details">
+		<button class="btn btn-danger" id="clear_message">Clear Message
+		</button>
+		<div class="form-group"><label for="assistance_requirement" class="form-label">Assistance Requirement </label><textarea class="text_box form-control" data-target-message-builder-id="am_r" id="assistance_requirement"></textarea>
+		</div>
+		<div class="helpers" id="am_r">
+		<h3>Quick Message Builder</h3>
+		<ul>
+		<li><a class="phrase" href="#">Make Pumps</a></li>
+		<li><a class="phrase" href="#">Make SRU</a></li>
+		<li><a class="phrase" href="#">Make Aerial Ladder Platforms</a></li>
+		<li><a class="phrase" href="#">Make Command Support</a></li>
+		<li><a class="phrase" href="#">Make HPU</a></li>
+		<li><a class="phrase" href="#">Make Water Bowser</a></li>
+		</ul>
+		</div>
+		<div class="form-group">
+		<label for="tactical_mode" class="form-label">Tactical mode</label>
+		<select class="form-control" id="tactical_mode">
+		<option val="Oscar offensive">Oscar offensive</option>
+		<option val="Delta defensive">Delta defensive</option>
+		<option val="No overall mode declared">No overall mode declared</option>
+		</select>
+		</div>
+		
+		
+		<div class="form-group">
+		<label for="tactical_mode_reason" class="form-label">Tactical mode reason</label>
+		<textarea class="text_box form-control" data-target-message-builder-id="am_tm" id="am_tactical_mode_reason"></textarea>
+		</div>
+		
+		<div class="helpers" id="am_tm">
+		<h3>Quick Message Builder</h3>
+		<ul>
+		<li><a class="phrase" href="#">Saveable Life</a></li>
+		<li><a class="phrase" href="#">Saveable Property</a></li>
+		<li><a class="phrase" href="#">Enviromental Protection</a></li>
+		<li><a class="phrase" href="#">Investigation</a></li>
+		<li><a class="phrase" href="#">Information Gathering</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+		</ul>
+		</div>
+		<div class="form-group">
+		<button class="btn btn-success" id="am_create_message">Create message
+		</button>
+		</div>
+		</div>
+		<div id="assistance_message">
+		
+		<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_am" data-target-message-title="Assistance Message"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+		<div id="log_message_container_am">
+		
+		<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> assistance message over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with assistance message over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED assistance message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span>. <span class="assistance_requirement">assistance_requirement</span>. Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: Assistance message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span> <span class="assistance_requirement">assistance_requirement</span>. Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. ED over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> wilko ED out</span>
+		</p>
+		</div>
+		</div>
+		<div class="form-group">
+		<button class="btn btn-warning" id="new_assistance_message">New Assistance Message</button>
+		</div>
+		
+		
+		
+		</div>
+        </section>
+		<!-- END Assistance Message -->
+		
+		
+		<!-- START Simple Informative Message -->
+		
+		<section id="message_ims">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Informative Message - Simple</h1>
+		<div class="boilerform">
+		  <div id="informative_message_simple_details">
+			<button class="btn btn-danger" id="clear_informative_simple_message">Clear Message</button>
+			
+			<div class="form-group">
+			<label for="informative_simple_detail" class="form-label">Message </label>
+			<textarea class="text_box form-control" data-target-message-builder-id="im_s_a" id="informative_simple_detail"></textarea>
+			</div>
+			
+			<div class="helpers" id="im_s_a">
+			  <h3>Quick Message Builder
+			  </h3>
+			  <ul>
+				<li><a class="phrase" href="#">Breathing Apperatus</a></li>
+				<li><a class="phrase" href="#">Main Jet</a></li>
+				<li><a class="phrase" href="#">Positive Pressure Ventilation</a></li>
+				<li><a class="phrase" href="#">Hose Reel Jet</a></li>
+				<li><a class="phrase" href="#">Aerial Ladder Platform</a></li>
+				<li><a class="phrase" href="#">Stage One</a></li>
+				<li><a class="phrase" href="#">Stage Two</a></li>
+				<li><a class="phrase" href="#">Small Tools</a></li>
+			  </ul>
+			</div>
+			
+			<div class="form-group">
+			<label for="tactical_mode" class="form-label">Tactical mode</label>
+			<select id="tactical_mode" class="form-control">
+			<option val="Oscar offensive">Oscar offensive</option>
+			<option val="Delta defensive">Delta defensive</option>
+			<option val="No overall mode declared">No overall mode declared</option>
+			</select>
+			</div>
+			<div class="form-group">
+			<label for="ims_tactical_mode_reason" class="form-label">Tactical mode reason</label>
+			<textarea class="text_box form-control" data-target-message-builder-id="im_s_tm" id="ims_tactical_mode_reason"></textarea>
+			</div>
+			<div class="helpers" id="im_s_tm">
+			  <h3>Quick Message Builder
+			  </h3>
+			  <ul>
+				<li><a class="phrase" href="#">Saveable Life</a></li>
+				<li><a class="phrase" href="#">Saveable Property</a></li>
+				<li><a class="phrase" href="#">Enviromental Protection</a></li>
+				<li><a class="phrase" href="#">Investigation</a></li>
+				<li><a class="phrase" href="#">Information Gathering</a></li>
+				<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+				<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+			  </ul>
+			</div>
+			<div  class="form-group">
+			<button class="btn btn-success" id="ims_create_message">Create message</button>
+			</div>
+		  </div>
+		  <div id="informative_message_simple">
+		  <button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_ims" data-target-message-title="Informative Message - Simple"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_ims">
+			<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> informative message over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with informative message over</span>
+			</p>
+			<p><span class="highlight2">Mobile: ED informative message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span>.
+			  <br />
+			  <span class="informative_simple_detail">informative_simple_detail</span> . Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: Informative message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span>
+			  <br />
+			  <span class="informative_simple_detail">informative_simple_detail</span> . Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. ED over</span>
+			</p>
+			<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> wilko ED out</span>
+			</p>
+		  </div>
+		  </div>
+		  <div class="form-group">
+			<button class="btn btn-warning" id="new_informative_simple_message">New Informative Simple Message
+			</button>
+		  </div>
+		</div>
+		
+		</div>
+		</section>
+				
+		<!-- END Simple Informative Message -->
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- START HAULAT Informative Message -->
+		<section id="message_im_haulat">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Informative HAULAT</h1>
+		
+		<div class="boilerform">
+		<div id="informative_haulat_details">
+		<button class="btn btn-danger" id="clear_informative_haulat_message">Clear Message
+		</button>
+		<div class="form-group">
+		<label for="informative_haulat_height" class="form-label">Height in floors </label>
+		<textarea id="informative_haulat_height" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_haulat_area" class="form-label">Area in meters </label>
+		<textarea id="informative_haulat_area" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_haulat_use" class="form-label">Use </label>
+		<textarea id="informative_haulat_use" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_haulat_location" class="form-label">Location of fire </label>
+		<textarea id="informative_haulat_location" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_haulat_action" class="form-label">Actions being taken </label>
+		<textarea class="text_box form-control" data-target-message-builder-id="im_h_a" id="informative_haulat_action"></textarea>
+		</div>
+		
+		
+		<div class="helpers" id="im_h_a">
+		<h3>Quick Message Builder</h3>
+		<ul>
+		<li><a class="phrase" href="#">Breathing Apperatus</a></li>
+		<li><a class="phrase" href="#">Main Jet</a></li>
+		<li><a class="phrase" href="#">Positive Pressure Ventilation</a></li>
+		<li><a class="phrase" href="#">Hose Reel Jet</a></li>
+		<li><a class="phrase" href="#">Aerial Ladder Platform</a></li>
+		<li><a class="phrase" href="#">Stage One</a></li>
+		<li><a class="phrase" href="#">Stage Two</a></li>
+		<li><a class="phrase" href="#">Small Tools</a></li>
+		</ul>
+		</div>
+		
+		<div class="form-group">
+		<label for="tactical_mode" class="form-label">Tactical mode</label>
+		<select id="tactical_mode" class="form-control">
+		<option val="Oscar offensive">Oscar offensive</option>
+		<option val="Delta defensive">Delta defensive</option>
+		<option val="No overall mode declared">No overall mode declared</option>
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="imh_tactical_mode_reason" class="form-label">Tactical mode reason</label>
+		<textarea class="text_box form-control" data-target-message-builder-id="im_h_tm" id="imh_tactical_mode_reason"></textarea>
+		</div>
+		<div class="helpers" id="im_h_tm">
+		<h3>Quick Message Builder</h3>
+		<ul>
+		<li><a class="phrase" href="#">Saveable Life</a></li>
+		<li><a class="phrase" href="#">Saveable Property</a></li>
+		<li><a class="phrase" href="#">Enviromental Protection</a></li>
+		<li><a class="phrase" href="#">Investigation</a></li>
+		<li><a class="phrase" href="#">Information Gathering</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+		</ul>
+		</div>
+		<div class="form-group">
+		<button class="btn btn-success" id="imh_create_message">Create message
+		</button>
+		</div>
+		</div>
+		
+		<div id="informative_haulat_message">
+		<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_imh" data-target-message-title="Informative Message - HAULAT"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_imh">
+		<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> informative message over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with informative message over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED informative message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span>.
+		<br />
+		<span class="informative_haulat_height">informative_haulat_height</span>
+		<br />
+		<span class="informative_haulat_area">informative_haulat_area</span>
+		<br />
+		<span class="informative_haulat_use">informative_haulat_use</span>
+		<br />
+		<span class="informative_haulat_location">informative_haulat_location</span>
+		<br />
+		<span class="informative_haulat_action">informative_haulat_action</span>.<br /> 
+		Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: Informative message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span>
+		<br />
+		<span class="informative_haulat_height">informative_haulat_height</span>
+		<br />
+		<span class="informative_haulat_area">informative_haulat_area</span>
+		<br />
+		<span class="informative_haulat_use">informative_haulat_use</span>
+		<br />
+		<span class="informative_haulat_location">informative_haulat_location</span>
+		<br />
+		<span class="informative_haulat_action">informative_haulat_action</span>. 
+		<br />
+		Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. ED over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> wilko ED out</span>
+		</p>
+		</div>
+		</div>
+		<div class="form-group">
+		<p>
+		<button class="btn btn-warning" id="new_informative_haulat_message">New Informative HAULAT Message
+		</button><p>
+		</div>
+		</div>
+			
+		
+		</div>
+		</section>
+		<!-- END HAULAT Informative Message -->
+		
+		
+		
+		
+		
+		
+		<!-- START METHANE Informative Message -->
+		<section id="message_im_methane">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Informative Message METHANE</h1>
+		
+		<div class="boilerform">
+		<div id="informative_methane_details">
+		
+		<button class="btn btn-danger" id="clear_message">Clear Message</button>
+		
+		<div class="form-group">
+		<label for="informative_major_incident" class="form-label">M (Major incident) </label>
+		<textarea id="informative_major_incident" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_exact_location" class="form-label">E (Exact location) </label>
+		<textarea id="informative_exact_location" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_type_of_incident" class="form-label">T (Type of incident) </label>
+		<textarea id="informative_type_of_incident" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_hazards" class="form-label">H (Hazards) </label>
+		<textarea id="informative_hazards" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_access" class="form-label">A (Access) </label>
+		<textarea id="informative_access" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_number_casulaties" class="form-label">N (Number and type of casualties) </label>
+		<textarea id="informative_number_casulaties" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="informative_emergency_services" class="form-label">E (Emergency services) </label>
+		<textarea class="text_box form-control" data-target-message-builder-id="im_m_e" id="informative_emergency_services"></textarea>
+		</div>
+		
+		<div class="helpers" id="im_m_e">
+		<h3>Quick Message Builder
+		</h3>
+		<ul>
+		<li><a class="phrase" href="#">Fire</a></li>
+		<li><a class="phrase" href="#">Police</a></li>
+		<li><a class="phrase" href="#">Ambulance</a></li>
+		<li><a class="phrase" href="#">HEART</a></li>
+		<li><a class="phrase" href="#">Environmental Agency</a></li>
+		</ul>
+		</div>
+		
+		<div class="form-group">
+		<label for="tactical_mode" class="form-label">Tactical mode</label>
+		<select id="tactical_mode" class="form-control">
+		<option val="Oscar offensive">Oscar offensive</option>
+		<option val="Delta defensive">Delta defensive</option>
+		<option val="No overall mode declared">No overall mode declared</option>
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="im_m_tactical_mode_reason" class="form-label">Tactical mode reason</label>
+		<textarea class="text_box form-control" data-target-message-builder-id="im_m_tm" id="im_m_tactical_mode_reason"></textarea>
+		</div>
+		
+		<div class="helpers" id="im_m_tm">
+		<h3>Quick Message Builder
+		</h3>
+		<ul>
+		<li><a class="phrase" href="#">Saveable Life</a></li>
+		<li><a class="phrase" href="#">Saveable Property</a></li>
+		<li><a class="phrase" href="#">Enviromental Protection</a></li>
+		<li><a class="phrase" href="#">Investigation</a></li>
+		<li><a class="phrase" href="#">Information Gathering</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+		</ul>
+		</div>
+		
+		<button class="btn btn-success" id="create_message_methane">Create message</button>
+		
+		</div>
+		
+		
+		
+		<div id="informative_message">
+		<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_imm" data-target-message-title="Informative Message - METHANE"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+		<div id="log_message_container_imm">
+		<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> informative message over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with informative message over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED informative message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span>.
+		<br />
+		<span class="informative_major_incident">informative_major_incident</span>
+		<br />
+		<span class="informative_exact_location">informative_exact_location</span>
+		<br />
+		<span class="informative_type_of_incident">informative_type_of_incident</span>
+		<br />
+		<span class="informative_hazards">informative_hazards</span>
+		<br />
+		<span class="informative_access">informative_access</span>
+		<br />
+		<span class="informative_number_casulaties">informative_number_casulaties</span>
+		<br />
+		<span class="informative_emergency_services">informative_emergency_services</span>. 
+		<br />Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: Informative message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span>
+		<br />
+		<span class="informative_major_incident">informative_major_incident</span>
+		<br />
+		<span class="informative_exact_location">informative_exact_location</span>
+		<br />
+		<span class="informative_type_of_incident">informative_type_of_incident</span>
+		<br />
+		<span class="informative_hazards">informative_hazards</span>
+		<br />
+		<span class="informative_access">informative_access</span>
+		<br />
+		<span class="informative_number_casulaties">informative_number_casulaties</span>
+		<br />
+		<span class="informative_emergency_services">informative_emergency_services</span>. 
+		<br />Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>.
+		<br />
+		ED over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> wilko ED out</span>
+		</p>
+		</div>
+		<div>
+		
+		<button class="btn btn-warning" id="new_informative_methane_message">New Informative METHANE Message</button>
+		
+		</div>
+		</div>	
+		
+		</div>
+		</section>
+		<!-- END METHANE Informative Message -->
+		
+		
+		
+		
+		
+		
+		
+		<!-- START Establishing a Command Point Informative Message -->
+		<section id="message_im_ecp">
+		<div class="container">
+        <h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Informative Establish a Command Point  <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#info_ecp"><i class="bi bi-info-circle"></i> Info</button></h1>
+		
+		<div id="command_point_details">
+		<div class="form-group">
+		<label for="ecp_cp_appliance" class="form-label">Appliance Designated as Command Point </label> 
+		<input id="ecp_cp_appliance" type="text" class="form-control" />
+		</div>
+		
+		<div class="form-group">
+		<label for="ecp_cp_incident_commander" class="form-label">Incident Commander </label> 
+		<input id="ecp_cp_incident_commander" type="text" class="form-control" />
+		</div>
+		
+		<div class="form-group">
+		<label for="ecp_cp_command_point_name" class="form-label">Command Point Name </label> 
+		<input id="ecp_cp_command_point_name" type="text" class="form-control" />
+		</div>
+		
+		<div class="form-group">
+		<label for="ecp_cp_command_point_location" class="form-label">Command Point Location </label><textarea id="ecp_cp_command_point_location" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="tactical_mode" class="form-label">Tactical mode</label>
+		<select id="tactical_mode" class="form-control">
+		<option val="Oscar offensive">Oscar offensive</option>
+		<option val="Delta defensive">Delta defensive</option>
+		<option val="No overall mode declared">No overall mode declared</option>
+		</select>
+		</div>
+		
+		
+		<div class="form-group">
+		<label for="tactical_mode_reason" class="form-label">Tactical mode reason</label>
+		<textarea class="text_box form-control" data-target-message-builder-id="im_ecp_tm" id="im_ecp_tactical_mode_reason"></textarea>
+		</div>
+		
+		<div class="helpers" id="im_ecp_tm">
+		<h3>Quick Message Builder</h3>
+		<ul>
+		<li><a class="phrase" href="#">Saveable Life</a></li>
+		<li><a class="phrase" href="#">Saveable Property</a></li>
+		<li><a class="phrase" href="#">Enviromental Protection</a></li>
+		<li><a class="phrase" href="#">Investigation</a></li>
+		<li><a class="phrase" href="#">Information Gathering</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+		</ul>
+		</div>
+		
+		<button class="btn btn-success" id="im_ecp_create_message">Create message</button>
+		</div>
+		
+		<div id="ecp_message">
+		<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_imecp" data-target-message-title="Informative Message - Establishing a Command Point"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_imecp">
+		<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> informative message over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with informative message over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED informative message from <span class="oic">ioc</span>.
+		<br />
+		<span class="ecp_cp_appliance">ecp_cp_appliance</span> is now the Command Point for this incident known as <strong><span class="ecp_cp_command_point_name">ecp_cp_command_point_name</span> Command</strong>.<span class="ecp_cp_location"></span>
+		<br />
+		Incident Commander is <strong><span class="ecp_cp_incident_commander">ecp_cp_incident_commander</span></strong>.
+		<br />
+		Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>.
+		<br />
+		<span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> informative message from <span class="oic">ioc</span>. <span class="ecp_cp_appliance">ecp_cp_appliance</span> is now the Command Point for this incident known as <span class="ecp_cp_command_point_name">ecp_cp_command_point_name</span> Command.<span class="ecp_cp_location"></span> Incident Commander is <span class="ecp_cp_incident_commander">ecp_cp_incident_commander</span>. Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> Roger ED out</span>
+		</p>
+		</div>	
+		</div>
+		
+		</div>
+		</section>
+		<!-- END Establishing a Command Point Informative Message -->
+		
+		
+		
+		
+		
+		
+		
+		<!-- START Closing down a Command Point Informative Message -->
+		<section id="message_im_cdcp">
+		<div class="container">
+        <h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Informative Establish a Command Point  <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#info_cdcp"><i class="bi bi-info-circle"></i> Info</button></h1>
+		
+		<div id="cd_command_point_details">
+		<div class="form-group">
+		<label for="cdcp_cp_appliance" class="form-label">Appliance Contact Point </label> 
+		<input id="cdcp_cp_appliance" type="text" class="form-control" />
+		</div>
+		
+		<div class="form-group">
+		<label for="cdcp_cp_incident_commander" class="form-label">Incident Commander </label> 
+		<input id="cdcp_cp_incident_commander" type="text" class="form-control" />
+		</div>
+		
+		<div class="form-group">
+		<label for="tactical_mode" class="form-label">Tactical mode</label>
+		<select id="tactical_mode" class="form-control">
+		<option val="Oscar offensive">Oscar offensive</option>
+		<option val="Delta defensive">Delta defensive</option>
+		<option val="No overall mode declared">No overall mode declared</option>
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="tactical_mode_reason" class="form-label">Tactical mode reason</label>
+		<textarea class="text_box form-control" data-target-message-builder-id="im_cdcp_tm" id="cdcp_tactical_mode_reason"></textarea>
+		</div>
+		
+		<div class="helpers" id="im_cdcp_tm">
+		<h3>Quick Message Builder
+		</h3>
+		<ul>
+		<li><a class="phrase" href="#">Saveable Life</a></li>
+		<li><a class="phrase" href="#">Saveable Property</a></li>
+		<li><a class="phrase" href="#">Enviromental Protection</a></li>
+		<li><a class="phrase" href="#">Investigation</a></li>
+		<li><a class="phrase" href="#">Information Gathering</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+		</ul>
+		</div>
+		
+		<button class="btn btn-success" id="cdcp_create_message">Create message
+		</button>
+		</div>
+		
+		
+		<div id="cdcp_message">
+		<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_imcdcp" data-target-message-title="Informative Message - Closing down a Command Point"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_imcdcp">
+		<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> informative message over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with informative message over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED informative message from <span class="oic">ioc</span>. <span class="appliance">appliance</span> is now closing down. Contact point will be <span class="cdcp_cp_appliance">cdcp_cp_appliance</span>. Incident Commander is now <span class="cdcp_cp_incident_commander">ecp_cp_incident_commander</span>. Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>.
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> informative message from <span class="oic">ioc</span>. <span class="appliance">appliance</span> is now closing down. Contact point will be <span class="cdcp_cp_appliance">cdcp_cp_appliance</span>. Incident Commander is now <span class="cdcp_cp_incident_commander">cdcp_cp_incident_commander</span>. Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>.
+		</p>
+		<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> Roger ED out</span>
+		</p>
+		</div>
+		</div>
+		
+		</div>
+		</section>
+		<!-- END Closing down a Command Point Informative Message -->
+		
+		
+		
+		
+		<!-- START Prority Message -->
+		
+		<section id="message_priority">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Priority Message</h1>
+		<div class="boilerform">
+		  <div id="priority_message_details">
+			<button class="btn btn-danger" id="clear_priority_message">Clear Message</button>
+			
+			<div class="form-group">
+			<label for="priority_message_detail" class="form-label">Message </label>
+			<textarea class="text_box form-control" data-target-message-builder-id="pm_detail" id="priority_message_detail"></textarea>
+			</div>
+			
+			<div class="helpers" id="pm_detail">
+			  <h3>Quick Message Builder
+			  </h3>
+			  <ul>
+				<li><a class="phrase" href="#">Breathing Apperatus</a></li>
+				<li><a class="phrase" href="#">Main Jet</a></li>
+				<li><a class="phrase" href="#">Positive Pressure Ventilation</a></li>
+				<li><a class="phrase" href="#">Hose Reel Jet</a></li>
+				<li><a class="phrase" href="#">Aerial Ladder Platform</a></li>
+				<li><a class="phrase" href="#">Stage One</a></li>
+				<li><a class="phrase" href="#">Stage Two</a></li>
+				<li><a class="phrase" href="#">Small Tools</a></li>
+			  </ul>
+			</div>
+			
+			<div class="form-group">
+			<label for="tactical_mode" class="form-label">Tactical mode</label>
+			<select id="tactical_mode" class="form-control">
+			<option val="Oscar offensive">Oscar offensive</option>
+			<option val="Delta defensive">Delta defensive</option>
+			<option val="No overall mode declared">No overall mode declared</option>
+			</select>
+			</div>
+			<div class="form-group">
+			<label for="priority_tactical_mode_reason" class="form-label">Tactical mode reason</label>
+			<textarea class="text_box form-control" data-target-message-builder-id="priority_m" id="priority_tactical_mode_reason"></textarea>
+			</div>
+			<div class="helpers" id="priority_m">
+			  <h3>Quick Message Builder
+			  </h3>
+			  <ul>
+				<li><a class="phrase" href="#">Saveable Life</a></li>
+				<li><a class="phrase" href="#">Saveable Property</a></li>
+				<li><a class="phrase" href="#">Enviromental Protection</a></li>
+				<li><a class="phrase" href="#">Investigation</a></li>
+				<li><a class="phrase" href="#">Information Gathering</a></li>
+				<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+				<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+			  </ul>
+			</div>
+			<div  class="form-group">
+			<button class="btn btn-success" id="priority_create_message">Create message</button>
+			</div>
+		  </div>
+		  <div id="priority_message">
+		  <button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_pm" data-target-message-title="Priority Message"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_pm">
+			<p><span class="highlight2">Mobile: ED priority message from <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with priority message ED over</span>
+			</p>
+			
+			<p><span class="highlight2">Mobile: ED from <span class="appliance">appliance</span> at <span class="incident_location">incident_location</span>.
+			  <br />
+			  <span class="priority_detail">priority_detail</span> . Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>
+			</p>
+			
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> at <span class="incident_location">incident_location</span>.
+			  <br />
+			  <span class="priority_detail">priority_detail</span> . Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. ED over</span>
+			</p>
+			<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+			</p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> roger ED out</span>
+			</p>
+		  </div>
+		  </div>
+		  <div class="form-group">
+			<button class="btn btn-warning" id="new_priority_message">New Priority Message
+			</button>
+		  </div>
+		</div>
+		
+		</div>
+		</section>
+				
+		<!-- END Prority Message -->
+		
+		
+		
+		
+		<!-- START Stop Message -->
+		<section id="message_sm">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Stop Message <button type="button" class="btn btn-default" data-bs-toggle="modal" data-bs-target="#info_sm"><i class="bi bi-info-circle"></i> Info</button></h1>
+		
+		<div id="stop_details">
+		<div class="form-group">
+		<label for="equipment_in_use">Equipment in use </label>
+		<textarea class="form-control" id="equipment_in_use"></textarea>
+		</div>
+		<div class="form-group">
+		<p>Establish tatical mode?</p>
+		<div class="radio_group form-check">
+		<input class="form-check-input" id="tactical_mode_yes" name="establish_tactical_mode" type="radio" value="yes" /><label for="tactical_mode_yes" class="form-check-label"> Yes</label>
+		</div>
+		<div class="form-check">
+		<input class="form-check-input" id="tactical_mode_no" name="establish_tactical_mode" type="radio" value="no" /><label for="tactical_mode_no" class="form-check-label"> No</label>
+		</div>
+		</div>
+		
+		<div class="tactical_mode_container">
+		<div class="form-group">
+		<label for="tactical_mode" class="form-label">Tactical mode</label>
+		<select id="tactical_mode" class="form-control">
+		<option val="Oscar offensive">Oscar offensive</option>
+		<option val="Delta defensive">Delta defensive</option>
+		<option val="No overall mode declared">No overall mode declared</option>
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="tactical_mode_reason" class="form-label">Tactical mode reason</label>
+		<textarea class="text_box form-control" data-target-message-builder-id="sm_tm" id="sm_tactical_mode_reason"></textarea>
+		</div>
+		
+		<div class="helpers" id="sm_tm">
+		<h3>Quick Message Builder
+		</h3>
+		<ul>
+		<li><a class="phrase" href="#">Saveable Life</a></li>
+		<li><a class="phrase" href="#">Saveable Property</a></li>
+		<li><a class="phrase" href="#">Enviromental Protection</a></li>
+		<li><a class="phrase" href="#">Investigation</a></li>
+		<li><a class="phrase" href="#">Information Gathering</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+		</ul>
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<label for="detained_at_scene" class="form-label">Detained at scene</label>
+		<textarea id="detained_at_scene" class="form-control"></textarea>
+		</div>
+		
+		<button class="btn btn-success" id="sm_create_message">Create message</button>
+		</div>
+		
+		
+		
+		<div id="stop_message">
+		<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_sm" data-target-message-title="Stop Message"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_sm">
+		<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> stop message over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with stop message over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED stop message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span> <span class="equipment_in_use">equipment_in_use</span> in use. <span class="sm_rm_tactical_mode">Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>.</span> Detained at scene for <span class="detained_at_scene">detained_at_scene</span> <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: stop message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span> <span class="equipment_in_use">equipment_in_use</span> in use. <span class="sm_rm_tactical_mode">Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>.</span> Detained at scene for <span class="detained_at_scene">detained_at_scene</span> ED over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> roger ED out</span>
+		</p>
+		</div>
+		</div>
+		
+		</div>
+		</section>
+		<!-- END Stop Message -->
+		
+		
+		
+		
+		
+		<!-- START Further Informative -->
+		
+		<section id="message_fim">
+		<div class="container">
+		<h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Further Informative Message</h1>
+		
+		<div id="further_informative_details">
+		<button class="btn btn-danger" id="fim_clear_message">Clear Message</button>
+		
+		<div class="form-group">
+		<label for="further_informative_message_details" class="form-label">Message </label>
+		<textarea id="further_informative_message_details" class="form-control"></textarea>
+		</div>
+		
+		<div class="form-group">
+		<label for="tactical_mode" class="form-label">Tactical mode</label>
+		<select id="tactical_mode" class="form-control">
+		<option val="Oscar offensive">Oscar offensive</option>
+		<option val="Delta defensive">Delta defensive</option>
+		<option val="No overall mode declared">No overall mode declared</option>
+		</select>
+		</div>
+		
+		<div class="form-group">
+		<label for="fim_tactical_mode_reason" class="form-label">Tactical mode reason</label>
+		<textarea class="text_box form-control" data-target-message-builder-id="fim_tm" id="fim_tactical_mode_reason"></textarea>
+		</div>
+		
+		<div class="helpers" id="fim_tm">
+		<h3>Quick Message Builder
+		</h3>
+		<ul>
+		<li><a class="phrase" href="#">Saveable Life</a></li>
+		<li><a class="phrase" href="#">Saveable Property</a></li>
+		<li><a class="phrase" href="#">Enviromental Protection</a></li>
+		<li><a class="phrase" href="#">Investigation</a></li>
+		<li><a class="phrase" href="#">Information Gathering</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Gas Supply</a></li>
+		<li><a class="phrase" href="#">Awaiting Isolaion of Electricity Supply</a></li>
+		</ul>
+		</div>
+		
+		<button class="btn btn-success" id="fim_create_message">Create message</button>
+		</div>
+		
+		
+		
+		<div id="further_informative_message">
+		<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_fim" data-target-message-title="Further Informative Message"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_fim">
+		<p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> further informative message over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> go ahead with further informative message over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED further informative message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span>. <span class="further_informative_message_details">further_informative_message_details</span>. Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: Informative message from <span class="oic">ioc</span> for <span class="incident_location">incident_location</span><span class="further_informative_message_details">further_informative_message_details</span>. Tactical Mode <span class="tactical_mode">tactical_mode</span> for <span class="tactical_mode_reason">tactical_mode_reason</span>. <span class="appliance">appliance</span> over. ED over</span>
+		</p>
+		<p><span class="highlight2">Mobile: ED Affirmative <span class="appliance">appliance</span> over</span>
+		</p>
+		<p><span class="highlight6">Control: <span class="appliance">appliance</span> wilko ED out</span>
+		</p>
+		</div>
+		</div>
+		<div>
+		<button class="btn btn-warning" id="new_further_informative_message">New Further Informative Message
+		</button>
+		</div>
+		</div>
+
+		</section>
+		
+		<!-- END Further Informative -->
+		
+		
+		
+		
+		
+		<!-- START Returning Home Station Mesage  -->
+		
+		<section id="message_rhs">
+		<div class="container">
+            <h1><button class="btn btn-primary page_link" data-target-page="message_selector"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Returning Home Station</h1>
+			<button class="add_message_to_pdf btn btn-success  float-end" data-target-message="log_message_container_rhs" data-target-message-title="Returning Home Station"><i class="bi bi-plus-circle-fill"></i> Add to Message Log</button>
+			<div id="log_message_container_rhs">
+            <p><span class="highlight2">Mobile: ED <span class="appliance">appliance</span> over</span></p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> ED over</span></p>
+			<p><span class="highlight2">Mobile: ED mobile to home station. <span class="appliance">appliance</span> over</span></p>
+			<p><span class="highlight6">Control: <span class="appliance">appliance</span> roger ED out</span></p>
+		</div>
+		</div>
+        </section>
+		
+		<!-- END Returning Home Station -->
+		
+		
+		
+		
+
+		<section id="station-numbers">
+			<h1><button class="btn btn-primary page_link" data-target-page="home"><span class="bi bi-arrow-left-circle-fill"></span> Back </button> Station Numbers</h1>
+			<p>List of Station Numbers.</p>
+			<table class="table table-bordered table-striped">
+			<tbody>
+			<tr>
+			<td>1
+			</td>
+			<td>Mansfield
+			</td>
+			<td>11
+			</td>
+			<td>Misterton
+			</td>
+			<td>21
+			</td>
+			<td class="null">&nbsp;
+			</td>
+			</tr>
+			<tr>
+			<td>2
+			</td>
+			<td>Blidworth
+			</td>
+			<td>12
+			</td>
+			<td>Retford
+			</td>
+			<td>22
+			</td>
+			<td class="null">&nbsp;
+			</td>
+			</tr>
+			<tr>
+			<td>3
+			</td>
+			<td>London Road
+			</td>
+			<td>13
+			</td>
+			<td>Tuxford
+			</td>
+			<td>23
+			</td>
+			<td>Stapleford
+			</td>
+			</tr>
+			<tr>
+			<td>4
+			</td>
+			<td class="null">&nbsp;
+			</td>
+			<td>14
+			</td>
+			<td>Southwell
+			</td>
+			<td>24
+			</td>
+			<td>Eastwood
+			</td>
+			</tr>
+			<tr>
+			<td>5
+			</td>
+			<td>Ashfield
+			</td>
+			<td>15
+			</td>
+			<td>Collingham
+			</td>
+			<td>25
+			</td>
+			<td>Hucknall
+			</td>
+			</tr>
+			<tr>
+			<td>6
+			</td>
+			<td>Edwinstowe
+			</td>
+			<td>16
+			</td>
+			<td>Newark
+			</td>
+			<td>26
+			</td>
+			<td>Arnold
+			</td>
+			</tr>
+			<tr>
+			<td>7
+			</td>
+			<td>Warsop
+			</td>
+			<td>17
+			</td>
+			<td>Bingham
+			</td>
+			<td>27
+			</td>
+			<td>Carlton
+			</td>
+			</tr>
+			<tr>
+			<td>8
+			</td>
+			<td>Worksop
+			</td>
+			<td>18
+			</td>
+			<td class="null">&nbsp;
+			</td>
+			<td>28
+			</td>
+			<td>East Leak
+			</td>
+			</tr>
+			<tr>
+			<td>9
+			</td>
+			<td class="null">&nbsp;
+			</td>
+			<td>19
+			</td>
+			<td>West Bridgeford
+			</td>
+			<td>29
+			</td>
+			<td>Highfields
+			</td>
+			</tr>
+			<tr>
+			<td>10
+			</td>
+			<td>Harworth
+			</td>
+			<td>20
+			</td>
+			<td>Stock Hill
+			</td>
+			<td class="null">&nbsp;
+			</td>
+			<td class="null">&nbsp;
+			</td>
+			</tr>
+			</tbody>
+			</table>
+		</section>
+		
+		<section id="translator">
+		<div class="container">
+		<form>
+            <h1><button class="btn btn-primary page_link" data-target-page="home"><span class="bi bi-arrow-left-circle-fill"></span> Back </button>  Translator</h1>
+			<div class="form-group row">
+			
+            <label for="wordInput" class="form-label">Enter a word:</label>
+			<div class="col-9">
+			<input id="wordInput" type="text" class="form-control" /> 
+			</div>
+			<div class="col-3">
+			<button class="btn btn-danger" id="clear_translator" style="margin:0;">Clear</button>
+			</div>
+			</div>
+			
+
+			<div class="form-group submit_btn">
+			<button class="btn btn-success" id="translate_btn">Translate</button>
+			
+			</div>
+			
+			</form>
+			<div id="result">&nbsp;</div>
+		</div>
+        </section>
+		
+		
+		
+		<section id="terminology">
+			<div class="container">
+			<h1><button class="btn btn-primary page_link" data-target-page="home"><span class="bi bi-arrow-left-circle-fill"></span> Back </button>  Standard Terminology</h1>
+			<p>The use of standard phrases will ensure exact meaning a sender wishes to convey is given to the receiever and no time is wasted.</p> 
+			<dl>
+			<dt>Affirmative</dt>
+			<dd>Indicates a positive response</dd>
+			
+			<dt>Negative</dt>
+			<dd>Indicates a negaitive response</dd>
+			
+			<dt>All after / All before</dt>
+			<dd>Used to identify/clarify parts of a message</dd>
+
+			<dt>Check</dt>
+			<dd><p>Only to be used when a lengthy message is being transmitted.</p><p>The sender wil break tranismission periodically using the word <strong>"Check"</strong> ; this will enable the recipient to check that part of the mssage so far received. If the message has been receievd and understood the recipient will reply <strong>"Check"</strong> and the transmission will continue.</p></dd>
+
+			<dt>Closing Down</dt>
+			<dd>Used when a mobile ceases operation and teh crew are to be contacted by a different communications device.</dd>
+			
+			<dt>Correction</dt>
+			<dd>Cancel the last word or phrase sent, or cancel word or indicated and substitue with the correct information. Also used to correct information that has been sent out but on repeating back (ie check) is apparent that it's been misheard.</dd>
+			
+			<dt>Fire Flash</dt>
+			<dd>Used by control for transmission of urgent operational messages whilst at stage 1 (loss of individual MDT) or stage 2 (total loss of data functions) fall back procedures are in operation.</dd>
+			
+			<dt>Priority message</dt>
+			<dd>Used by crews when it is deemed necessary to transmit urgent operational message. This will indicate to control that priority must be given to the message in prefference to others.</dd>
+			
+			<dt>I Spell</dt>
+			<dd>Used when spelling a word phonetically, abbreviation letter or series of letters.</dd>
+			
+			<dt>No Play</dt>
+			<dd><p>Used during exercise  to qualify the following information being real and not part of the exercise.</p><p>Example:  <strong>"No Play, No Play, No Play. Firefighter injured assistance required"</strong>.</p></dd>
+			
+			<dt>Roger</dt>
+			<dd>Indicates that a message has been receved and understood.</dd>
+			
+			<dt>Wilco</dt>
+			<dd>Indicates that a message requiring action has been receieved and understood and will be complied with.</dd>
+			
+			<dt>Over</dt>
+			<dd>Control and mobiles use of the term <strong>"Over"</strong> after each radio transmission. <strong>"Over"</strong> indicates that the transmission is over.</dd>
+			
+			<dt>Out</dt>
+			<dd>The transmission is ended and I do not expect you to make a further transmission on this subject. I am listening to messages from other mobiles. Out will only be used by Control at the end of a communication.</dd>
+			
+			<dt>Repeat</dt>
+			<dd>To verfy text of a message or of part indicated with the originator.</dd>
+			
+			<dt>Wait</dt>
+			<dd>A pause of a few seconds will follow, other users must not intterupt.</dd>
+			
+			<dt>Wait out</dt>
+			<dd>I hav finished for the time being and will call you again later. Other users may transmit if neccessary.</dd>
+			
+			<dt>Kilo One</dt>
+			<dd>The term <strong>"Kilo One"</strong> will be used on the inicident ground and in standard radio messages to identify a deceased casualty.</dd>
+			</dl>
+			
+		
+		</section>
+		
+		
+		
+		<!-- START Message Log -->
+		
+		<section id="message_log">
+		<div class="container">
+			<h1><button class="btn btn-primary page_link" data-target-page="home"><span class="bi bi-arrow-left-circle-fill"></span> Back </button>  Message Log</h1>
+			<button class="btn btn-success pull-right" id="download_pdf_log" data-target-page="download_pdf">Download PDF Log</button>
+		<hr>
+		<div id="message_log_container" style="font-family:Arial, Helvetica, sans-serif;width:190mm;"></div>
+
+		</div>			
+		</section>
+		<!-- END Message Log -->
+		
+		
+    </main>
+
+
+<!-- START Modals -->
+
+<div class="modal" tabindex="-1" id="info_mti">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Mobile to Incicent Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>It is not sufficient just to book 'mobile' unless this is purely via MDT and no voice message is being passed. The exact address must be clearly indicated by the appliance at this stage, to ensure the correct address has been received and understood.</p>
+
+<p>In addition the rank and name the Officer in Charge of the appliance together with the number of additional riders must be given, unless this information has been entered into the MDT.
+</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal" tabindex="-1" id="info_fi">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">First Impression Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>A first impressions message is intended to give fire control and oncomming appliances a brief initial apprasial of the nature and scale of the incident. it does not replace an "Informative Message". A tactical mode should only be included where a DRA has been conducted.</p>
+
+<p>On arrival at an incident where it is identified that persons are trapped or unaccounted for, the message "Persons reported" should be passsed to fire control immediately as either part of the first impression message r as a seperate Informative Message:</p>
+
+<p style="text-align:cetner;"><strong>"this incident is now persons reported."</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal" tabindex="-1" id="info_am">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Assistance Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>An assistance message is one which requests any equipment, information, appliance or service not readily available on the incident ground. A specific reason for the assistance message allows Fire Control to assign the correct resource to the incident.</p>
+
+<p><strong>All Assistance messages must be voice communicated and are high priority messages and should be actioned without delay.</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal" tabindex="-1" id="info_ecp">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Establishing a Command Point</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>As an incident progresses the Incident Commander may deem it necessary to establish a Command Point.</p>
+
+<p>This will be singular point which will manage communications, the flow of information from and to the incident ground, requests for resources and the collation of information e.g.decision logs, site maps, personnel in attendance etc.</p>
+
+<p>Once the decision to establish a Command Point has been taken Fire Control must be informed of which appliance has been designated, the name of the Command Point and the name of the Incident Commander. This information should be passed as an informative message.</p>
+
+<p>As a general rule, a Command Point should be established at all incidents of two appliances and above.</p>
+
+<p>Once a command point has been named then subsequent initial contact with Fire Control must be made using the name of the Command Point. The identity of the appliance will already be attached as the Command Point in Fire Control. During the passage of messages whoever is in overall charge at the incident should be referred to as 'Incident Commander' as their name will be attached to the Incident Commander role. Any change in Incident Commander should be communicated to Fire Control.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="info_cdcp">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Closing Down a Command Point</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>As an incident is being downsized and appliances start to depart the Command Point can revert back to an appliance callsign. This should be sent as an informative message and contain the appliance call sign which will now pass and receive messages and the current Incident commander.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="info_sm">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Stop Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>A "Stop message" from an incident informs control the IC has sufficient resource on the incident ground to deal with the incident and must always be sent via a voice message.</p>
+<p>Within a "Stop message" content there must also be given an indication of how long the appliances are likely to be detained at the incident.
+</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END Modals -->
+
+
+
+</body>
+</html>
