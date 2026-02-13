@@ -617,9 +617,9 @@ $(document).ready(function() {
 			
 		});
 		
-		$('#new_informative_message').click(function(){
+		$('#new_informative_methane_message').click(function(){
 			$('#informative_message').hide();
-			$('#informative_details').show();
+			$('#informative_methane_details').show();
 		});
 		
 		$('#clear_message').click(function(){
@@ -1081,4 +1081,5 @@ $(document).ready(function() {
 
 
 	
+
 });
